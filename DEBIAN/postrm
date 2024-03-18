@@ -1,0 +1,5 @@
+#!/bin/sh
+echo "Removing GioppyGio Plugin from the system ..."
+rm -r /usr/lib/enigma2/python/Plugins/Extensions/GioppyGio > /dev/null 2>&1
+echo "Restarting Enigma2 to get rid of GioppyGio Plugin..."
+exit 0

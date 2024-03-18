@@ -1,0 +1,11 @@
+Package: enigma2-plugin-extensions-gioppygio
+Version: 12.1
+Description: GioppyGio Setting and Picons
+Section: enigma2
+Priority: optional
+Maintainer: madhouse <anonm4d@gmail.com>
+Architecture: all
+OE: Enigma2 Plugin
+Homepage: www.gioppygio.it
+Depends:
+Source: www.gioppygio.it

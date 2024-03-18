@@ -1,0 +1,30 @@
+#!/bin/sh
+echo "****************************************"
+echo "*     GioppyGio Settings installed     *"
+echo "*                                      *"
+echo "*            GioppyGio Team            *"
+echo "*            Coder Madhouse            *"
+echo "*           Enjoy our plugin           *"
+echo "****************************************"
+echo ""
+echo "****************************************"
+echo "*        Please restart the GUI        *"
+echo "****************************************"
+sleep 5
+if [ -f /tmp/Date ];then
+  cp "/tmp/Date" /usr/lib/enigma2/python/Plugins/Extensions/GioppyGio/Moduli/Settings/ > /dev/null 2>&1
+fi
+if [ -f /tmp/Select ];then
+  cp "/tmp/Select" /usr/lib/enigma2/python/Plugins/Extensions/GioppyGio/Moduli/Settings/ > /dev/null 2>&1
+fi
+if [ -f /tmp/send_settings ];then
+  cp "/tmp/send_settings" /etc/enigma2/ > /dev/null 2>&1
+fi
+if [ -f /tmp/gioppygio_picons ];then
+  cp "/tmp/gioppygio_picons" /etc/enigma2/ > /dev/null 2>&1
+fi
+rm -rf /tmp/gioppygio.ipk > /dev/null 2>&1
+echo "config.plugins.epgimport.enabled=true" >> /etc/enigma2/settings;
+echo "config.plugins.epgimport.longDescDays=5" >> /etc/enigma2/settings;
+echo "config.plugins.epgimport.wakeup=6:0" >> /etc/enigma2/settings;
+exit 0

@@ -1,0 +1,12 @@
+#!/bin/sh
+echo "Checking for an older version of GioppyGio in the system..."
+if [ -d /usr/lib/enigma2/python/Plugins/Extensions/GioppyGio ]
+then
+rm -rf /usr/lib/enigma2/python/Plugins/Extensions/GioppyGio > /dev/null 2>&1
+echo "An older version of GioppyGio was found and removed"
+echo "Proceeding to installation..."
+else
+echo "GioppyGio was not found in the system"
+echo "Proceeding to installation..."
+fi
+exit 0
